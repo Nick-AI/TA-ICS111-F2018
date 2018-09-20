@@ -1,5 +1,5 @@
 
-public class PracticeMidterm {
+public class PracticeMidtermOne {
 
 	public static void main(String[] args){
 		//What is the output of the following two lines of code?
