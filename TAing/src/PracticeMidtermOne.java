@@ -7,8 +7,8 @@ public class PracticeMidtermOne {
 		practiceTwo(7, "test ");
 		
 		int test = practiceThree(2, 3); // since java has no operator to calculate a^b (read: a to the power of b)
-										//complete the function practiceThree to perform that calculation and return the result
-		System.out.println(test); //this should print 8
+						//complete the function practiceThree to perform that calculation and return the result
+		System.out.println(test); // this should print 8
 	}
 	
 	public static void practiceOne(){
