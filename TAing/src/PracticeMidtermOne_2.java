@@ -54,7 +54,7 @@ public class PracticeMidtermOne_2 {
     public static int fibonacci(int upperLimit){
         //Complete the function to find the closest fibonacci number below upperLimit
         //The fibonacci sequence is the sequence of numbers where the number at position i is calculated by the simple
-        //formula f(i)=f(i-1)+f(1-2)
+        //formula f(i)=f(i-1)+f(i-2)
         //The sequence starts with 0, 1, 1, 2, 3, 5, 8, 13, 21, ...
     }
 }
