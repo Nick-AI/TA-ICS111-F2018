@@ -1,5 +1,5 @@
 
-public class PracticeOct02 {
+public class SOLUTIONSPracticeOct02 {
 
 	public static void main(String[] args) {
 		//write a function to get an array with the first x numbers of the fibonacci sequence
