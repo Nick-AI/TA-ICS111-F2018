@@ -1,0 +1,52 @@
+
+public class SOLUTIONSPracticeOct02 {
+
+	public static void main(String[] args) {
+		//write a function to get an array with the first x numbers of the fibonacci sequence
+		int x = 10;
+		int[] fibNums = getFibonacci(x);  
+		
+		//print out all of the elements in the array you just got
+		for(int i=0; i<fibNums.length; i++)
+			System.out.print(fibNums[i] + " ");
+		System.out.println();
+		
+		//write a function to find the largest number in an array of positive numbers
+		int[] nums = {2, 32, 1, 454, 231, 3, 1, 76};
+		int max = findMax(nums);
+		System.out.println(max);
+		
+		//What will this print?
+		someFunction();
+	}
+	
+	public static void someFunction(){
+		int row = 10;
+	    for(int i=1, star=1; i<=row; i++, star+=2){
+	        for(int space=row; space>i; space--)
+	            System.out.print(" ");
+	        for(int j=1; j<=star; j++)
+	            System.out.print("*");
+	        System.out.println();
+	    }
+	}
+	
+	public static int[] getFibonacci(int idx){
+		int prev=0, curr=1; 
+		int[] fibNumbers = new int[idx];
+		for(int i=0; i<idx; curr+=prev, prev = curr - prev, i++){
+			fibNumbers[i] = prev;
+		}
+		return fibNumbers;
+	}
+	
+	public static int findMax(int[] nums){
+		int max = -1;
+		for(int num:nums){
+			if(num>max)
+				max=num;
+		}
+		return max;
+	}
+
+}
