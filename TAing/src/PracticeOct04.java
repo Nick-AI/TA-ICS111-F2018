@@ -18,6 +18,7 @@ public class PracticeOct04 {
         System.out.println(user_inp);
 
         //write a function that takes as input a String specifying a file name and prints out every line of the file
+        filePrint("scan_me.txt");
         filePrint("sample.txt");
 
         //look at the students.txt file
