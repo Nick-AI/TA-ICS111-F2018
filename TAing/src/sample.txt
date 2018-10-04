@@ -1,8 +1,0 @@
-
-This is
-just to test
-the filePrint function
-12 323 1 @
-
-
-Goodbye.
