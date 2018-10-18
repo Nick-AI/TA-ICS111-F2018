@@ -32,16 +32,15 @@ public class PracticeOct16 {
 	public static String seasonTemp(String season){
 		String temp = "";
 		switch(season.toLowerCase()){
-			case "Spring": 	temp = "mild";
-							break;
-			case "Summer":	temp = "hot";
-							break;
-			case "Fall": 	temp = "meh.";
-							break;
-			case "Autumn":	temp = "meh.";
-							break;
-			case "December":temp = "cold";
-							break;
+			case "spring": 	temp = "mild";
+					break;
+			case "summer":	temp = "hot";
+					break;
+			case "fall":
+			case "autumn":	temp = "meh.";
+					break;
+			case "december":temp = "cold";
+					break;
 		}
 		return temp;
 	}
