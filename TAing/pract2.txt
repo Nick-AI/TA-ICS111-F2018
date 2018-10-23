@@ -1,0 +1,4 @@
+"Hello" in binary sums to
+5406523
+test123
+2343.4323
