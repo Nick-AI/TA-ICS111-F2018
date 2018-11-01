@@ -19,6 +19,7 @@ public class PracticeNov01 {
 		LineNumberReader lr = new LineNumberReader(new FileReader("storage.txt"));
 		lr.skip(Long.MAX_VALUE);
 		int num_students = lr.getLineNumber()+1;
+		lr.close();
 		
 		//divide the students into two equally large groups of students
 		
