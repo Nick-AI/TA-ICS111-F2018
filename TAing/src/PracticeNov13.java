@@ -29,22 +29,23 @@ public class PracticeNov13 {
 		Queen[] queens;
 		boolean isValid;
 		int boardCount = 0;
+		int nQueens = 4;
 		
 		//generate boards until a valid one is found
 		do{		
 			Random rng = new Random();
 			//create a 4x4 empty chess board
-			chess = new char[4][4];
+			chess = new char[nQueens][nQueens];
 			for(int r=0; r<chess.length; r++){
 				for(int c=0; c<chess[r].length; c++){
 					chess[c][r] = '-';
 				}
 			}
 			
-			queens = new Queen[4];
+			queens = new Queen[nQueens];
 			//put one queen in each row and store the location of that queen in the queens array
 			for(int r=0; r<chess.length; r++){
-				int c = rng.nextInt(4);
+				int c = rng.nextInt(nQueens);
 				chess[r][c] = 'Q';
 				queens[r] = new Queen(r, c);
 			} 
@@ -95,3 +96,4 @@ public class PracticeNov13 {
 		}
 	}
 }
+
