@@ -58,14 +58,7 @@ public class PracticeNov13 {
 				for(int j=i+1; j<queens.length; j++){
 					Queen other = queens[j];
 					//straight collisions
-					if(other.row == temp.row || other.col == temp.col){
-						isValid = false;
-						break checkLoop;
-					}
-					//diagonal collisions
-					double diffRow = Math.abs(temp.row - other.row);
-					double diffCol = Math.abs(temp.col - other.col);
-					if(diffRow == diffCol){
+					if(temp.conflictsWith(other)){
 						isValid = false;
 						break checkLoop;
 					}
@@ -94,6 +87,18 @@ public class PracticeNov13 {
 		public String toString(){
 			return "R: " + row + " C: " + col;
 		}
+		
+		public boolean conflictsWith(Queen q){
+			if(this.row == q.row || this.col == q.col){
+				return true;
+			}
+			//diagonal collisions
+			double diffRow = Math.abs(this.row - q.row);
+			double diffCol = Math.abs(this.col - q.col);
+			if(diffRow == diffCol){
+				return true;
+			}
+			return false;
+		}
 	}
 }
-
