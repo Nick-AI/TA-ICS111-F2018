@@ -25,7 +25,7 @@ public class PracticeNov13 {
 		
 		
 		//4-Queens Problem (https://en.wikipedia.org/wiki/Eight_queens_puzzle): 
-		char[][] chess;
+		char[][] chessBoard;
 		Queen[] queens;
 		boolean isValid;
 		int boardCount = 0;
@@ -34,19 +34,19 @@ public class PracticeNov13 {
 		//generate boards until a valid one is found
 		do{		
 			Random rng = new Random();
-			//create a 4x4 empty chess board
-			chess = new char[nQueens][nQueens];
-			for(int r=0; r<chess.length; r++){
-				for(int c=0; c<chess[r].length; c++){
-					chess[c][r] = '-';
+			//create a 4x4 empty chessBoard board
+			chessBoard = new char[nQueens][nQueens];
+			for(int r=0; r<chessBoard.length; r++){
+				for(int c=0; c<chessBoard[r].length; c++){
+					chessBoard[c][r] = '-';
 				}
 			}
 			
 			queens = new Queen[nQueens];
 			//put one queen in each row and store the location of that queen in the queens array
-			for(int r=0; r<chess.length; r++){
+			for(int r=0; r<chessBoard.length; r++){
 				int c = rng.nextInt(nQueens);
-				chess[r][c] = 'Q';
+				chessBoard[r][c] = 'Q';
 				queens[r] = new Queen(r, c);
 			} 
 			
@@ -70,7 +70,7 @@ public class PracticeNov13 {
 			//ternary operator works as follows: [booleanCondition ? valueIfTrue : valueIfFalse]
 			System.out.println("A" + (isValid ? " valid" : "n invalid") + " board:");
 			//show the board
-			for(char[] row: chess){
+			for(char[] row: chessBoard){
 				System.out.println(Arrays.toString(row));
 			}
 			
